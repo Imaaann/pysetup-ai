@@ -1,6 +1,7 @@
 # py setup ai
 
 CLI that creates and manages uv projects using named package profiles.
+> yes this is something I made in one afternoon so bare with me
 
 ## Install
 
