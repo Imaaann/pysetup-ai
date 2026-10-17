@@ -1,0 +1,29 @@
+[project]
+name = "pysetup-ai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Imaaann", email = "iman555bpe147@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "argparse>=1.4.0",
+]
+
+[project.scripts]
+pysetup-ai = "setup:main"
+
+[build-system]
+requires = ["uv_build>=0.12.21,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.workspace]
+members = [
+    "my_project",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
