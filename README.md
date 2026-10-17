@@ -25,3 +25,17 @@ Add `-y` to `add`/`rm` to accept prompts. Unknown names get a "did you mean" sug
 ## Profiles
 
 `none`, `data`, `dl`, `cv`, `audio`, `scrape`, `llm`, `web`. Contents are defined in `PROFILES` in `setup.py`.
+
+## Installation
+
+With your favorite package manager run.
+
+`uv tool install pysetup-ai`
+
+Or if you want to run it without installing it on your machine use
+
+`uvx pysetup-ai [args]`
+
+## Issues & Contributing
+
+you may suggest profiles, features or fix issues by creating issues and pull requests on this repository.
