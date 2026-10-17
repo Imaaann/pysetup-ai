@@ -169,7 +169,7 @@ def cmd_list(args):
         mark = "*" if name in installed else " "
         print(f"{mark} {name:8} {" ,".join(pkg)}")
 
-def cmd_launch_jupyter():
+def cmd_launch_jupyter(args):
     uv("run", "jupyter", "lab", "--no-browser", "--ip=127.0.0.1", f"--port={JUPYTER_PORT}", "--ServerApp.port_retries=0", f"--IdentityProvider.token={JUPYTER_TOKEN}")
     time.sleep(3)
     webbrowser.open(f"http://127.0.0.1:{JUPYTER_PORT}/lab?token={JUPYTER_TOKEN}")
