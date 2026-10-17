@@ -170,7 +170,6 @@ def cmd_list(args):
         print(f"{mark} {name:8} {" ,".join(pkg)}")
 
 def cmd_launch_jupyter():
-    print("Running Jupyter in localhost (127.0.0.1)")
     uv("run", "jupyter", "lab", "--no-browser", "--ip=127.0.0.1", f"--port={JUPYTER_PORT}", "--ServerApp.port_retries=0", f"--IdentityProvider.token={JUPYTER_TOKEN}")
     time.sleep(3)
     webbrowser.open(f"http://127.0.0.1:{JUPYTER_PORT}/lab?token={JUPYTER_TOKEN}")
