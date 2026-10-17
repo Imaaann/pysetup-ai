@@ -8,6 +8,7 @@ import sys
 import time
 import webbrowser
 from pathlib import Path
+from importlib.metadata import version
 
 STATE_FILE = ".pysetup_profiles.json"
 
@@ -179,6 +180,7 @@ def cmd_launch_jupyter(args):
 
 def build_parser():
     parser = argparse.ArgumentParser(prog="setup")
+    parser.add_argument("--version", action="version", version=version("pysetup-ai"))
     sub = parser.add_subparsers(dest="command", required=True)
 
     p_init = sub.add_parser("init", help="create a new project")
